@@ -4,7 +4,7 @@ import multiprocessing
 from deap import base, creator, tools, algorithms
 import random
 
-# ===============================
+
 # 1. Crear el laberinto
 <<<<<<< Updated upstream
 # ===============================
