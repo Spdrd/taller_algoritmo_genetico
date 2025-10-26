@@ -6,7 +6,6 @@ import random
 
 # ===============================
 # 1. Crear el laberinto
-# ===============================
 laberinto = np.zeros((20, 20))
 inicio = (0, 0)
 salida = (0, 19)
