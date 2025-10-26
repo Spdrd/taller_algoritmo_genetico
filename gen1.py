@@ -6,7 +6,11 @@ import random
 
 # ===============================
 # 1. Crear el laberinto
+<<<<<<< Updated upstream
 # ===============================
+=======
+
+>>>>>>> Stashed changes
 laberinto = np.zeros((20, 20))
 inicio = (0, 0)
 salida = (0, 19)
@@ -25,9 +29,9 @@ MOVIMIENTOS = {
 }
 
 
-# ===============================
+
 # 2. Funciones auxiliares
-# ===============================
+
 def mover(pos, movimiento):
     """Devuelve nueva posición si es válida."""
     x, y = pos
@@ -53,9 +57,8 @@ def evaluar(ind):
     return (100 - distancia(pos, salida),)
 
 
-# ===============================
+
 # 3. Configurar DEAP
-# ===============================
 creator.create("FitnessMax", base.Fitness, weights=(1.0,))
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
@@ -69,9 +72,9 @@ toolbox.register("mutate", tools.mutUniformInt, low=0, up=3, indpb=0.1)
 toolbox.register("select", tools.selTournament, tournsize=3)
 
 
-# ===============================
+
 # 4. Mostrar la mejor ruta
-# ===============================
+
 def mostrar_ruta(individuo):
     pos = inicio
     camino = [pos]
@@ -90,9 +93,9 @@ def mostrar_ruta(individuo):
     plt.show()
 
 
-# ===============================
+
 # 5. Ejecución con multiprocessing
-# ===============================
+
 if __name__ == "__main__":
     # Parámetros ajustables:
     TAM_POB = 200       # población
